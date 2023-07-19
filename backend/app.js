@@ -27,7 +27,7 @@ app.use(function (err, req, res, next) {
     res.status(500).json({ success: false, data: err.message })
 })
 
-mongoose.connect(DB_URL, {
+mongoose.connect("mongodb://127.0.0.1:27017/GoalTracker", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
